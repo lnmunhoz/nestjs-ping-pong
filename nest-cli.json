@@ -1,0 +1,39 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/ping/src",
+  "monorepo": true,
+  "root": "apps/ping",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/ping/tsconfig.app.json"
+  },
+  "projects": {
+    "ping": {
+      "type": "application",
+      "root": "apps/ping",
+      "entryFile": "main",
+      "sourceRoot": "apps/ping/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ping/tsconfig.app.json"
+      }
+    },
+    "pong": {
+      "type": "application",
+      "root": "apps/pong",
+      "entryFile": "main",
+      "sourceRoot": "apps/pong/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/pong/tsconfig.app.json"
+      }
+    },
+    "common": {
+      "type": "library",
+      "root": "libs/common",
+      "entryFile": "index",
+      "sourceRoot": "libs/common/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/common/tsconfig.lib.json"
+      }
+    }
+  }
+}
