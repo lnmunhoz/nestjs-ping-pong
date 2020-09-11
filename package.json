@@ -5,7 +5,7 @@
   "author": "",
   "private": true,
   "license": "UNLICENSED",
-  "scripts":g {
+  "scripts": {
     "start:ping": "nest start ping --watch",
     "start:pong": "nest start pong --watch"
   },
